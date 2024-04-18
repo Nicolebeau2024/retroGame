@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberaX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container1">
+        <div class="item1"><p>La livraison offerte des 50€ d'achat !</p></div>
+        <div class="item2"><a href="http://127.0.0.1:5500/index.html"><img src="images\logo.bmp"></a></div>
+        <nav class="item3"><ul>
+                                <li><a href="http://127.0.0.1:5500/index.html" ><strong>HOME</strong></a></li>
+                                <li><a href="http://127.0.0.1:5500/index.html" >about</a></li>
+                                <li><a href="http://127.0.0.1:5500/index.html" >sign up</a></li>
+                            </ul></nav>
+    </div>
+    <div class="container2">
+        <div class="item4"><ul class="menu">
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html">PC assemblé</a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html">Ecrans</a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html">Peripheriques</a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html">Composants</a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html">Consommables & Goosies</a></li>
+        </ul></div>
+        <div class="item5">
+            <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran1.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran4.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran5.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran2.png" alt="" /></div>
+            </div>
+            </div>
+        </div>
+    
+        <div class="item6"></div>
+        <div class="item7"></div>
+        <div class="item8"></div>
+      
+
+CSS-----------------------------------------
+
+body {
+  background-color: #696969;
+}
+.container1 {  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 50px 1fr;
+  gap: 0px 0px; /* marge entre les grilles */
+ /* grid-auto-flow: row; Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. */
+  grid-template-areas: /* repartition des elements en colone et en ligne (exe:une colone de 2 lignes) */
+    "item1 item1" /* Paragraphe top fond noir */
+    "item2 item3" /* logo et nav bar */
+    
+}
+
+.item1 { grid-area: item1; 
+background-color: black;
+color: white;
+text-align: center;
+letter-spacing:0.75em ;
+}
+
+.item2 { grid-area: item2; /* logo */
+}
+  /* NAV BAR */
+.item3 { grid-area: item3; 
+padding: 5%;
+}
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border:2px solid #e1ff00;
+    background-color: #3f3f3f;
+    border-radius: 30px;
+    height: 62px;
+    padding-left: 6%;
+    width: 500px;
+  }
+  nav li {
+    padding: 12px 0 5px 0;
+    width: 25%;
+  }
+  nav a {
+    font-size: 2em;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff00;  /* lier */
+    border:2px solid #3f3f3f;
+  }
+  li a:hover {
+    background-color: #696969; /* lier */
+    padding: 2% 9% 2% 9%;
+    border: 2px solid #e1ff00;
+    
+    border-radius: 30px;
+  }/* NAV BAR - fin -*/
+
+
+
+
+.container2 {  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px; /* marge entre les grilles */
+ /* grid-auto-flow: row; Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. */
+ grid-template-areas: /* repartition des elements en colone et en ligne (exe:une colone de 2 lignes) */
+ "item4 item5" /* menu et baniere sales (sur 2 lignes) */
+ "item4 item5"
+ "item6 item6" /* best produits */
+ "item7 item7" /* logo de fin */
+ "item8 item8"; /* lien contact (fond noir */
+}
+.item4 { grid-area: item4;
+  
+}
+  .menu {
+    font-size: 1.5em;
+    background-color: #ffffff00;  /* lier */
+    list-style: none;
+    background-color: #3f3f3f;
+    border:2px solid #e1ff00;
+    border-radius: 15px;
+    width: 200px; /* largeur du menu */
+    height: auto; /* hauteur du menu */
+    padding: 5% 5%; /* padding des rebord du menu */
+    margin-left: 17%; /* decale le menu sur la droite */
+  }
+  .limenu {
+    padding: 5%; /*pading entre les lien du menu */
+  }
+li a { /* retrait du soulignement des lien du menu et la couleur de police */
+  text-decoration: none;
+  color: #000000;
+}
+
+.item5 { grid-area: item5; } /* premiere baniere */
+.slider {
+  width: 1000px; /* tail du splider (taille corespondant à une seule image) */
+  overflow: hidden; /* le overflow est hidden (le cache) */
+  height: 300px;
+  padding-top: 2.2%;
+  }
+
+  .slides {
+    width: calc(500px * 4); /* "calc = calcule" de la tail du nombre d'images */
+    animation: glisse 15s infinite; /* animer le slide, animation glisse, secondes vouluent, et lui donner une boucle infini */
+  }
+  .slide {
+    float: left; /* positionne les images vers la gauche (caché par l'OVERFLOW)(slide) */
+  }
+  @keyframes glisse { /*cree l'animation, les "%" donnent le pourcentage, les "-500px" donnent la position au pourcentage données  */
+0% {
+  transform: translateX(0);
+}
+10% {
+  transform: translateX(0);
+}
+33% {
+  transform: translateX(-500px);
+}
+43% {
+  transform: translateX(-500px);
+}
+66% {
+  transform: translateX(-1000px);
+}
+76% {
+  transform: translateX(-1000px);
+}
+100% {
+  transform: translateX(0);
+}
+}
+
+.item6 { grid-area: item6; }
+
+.item7 { grid-area: item7; }
+
+.item8 { grid-area: item8; }

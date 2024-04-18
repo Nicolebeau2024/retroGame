@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberaX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberaX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bodyformulaire">
+    <div class="container1">
+        <div class="item1"><p style="margin: 0;">👾 cybera<span style="color: #e1ff00;">X</span><span style="color: #696969;"> : welcome to the ... Retro GAME Universe !</span><img src="images/rtype/rtypes-enemy3-jump.gif"></p></div>
+        <div class="item2"><img class="imglogo" src="images\logo.bmp"></div>
+        <nav class="item3"><ul class="button">
+                                <li><a class="ulnav" href="http://127.0.0.1:5500/index.html" ><strong><span>HOME</span></strong></a></li>
+                                <li><a class="ulnav" href="http://127.0.0.1:5500/index.html" ><span>about</span></a></li>
+                                <li><a class="ulnav" href="http://127.0.0.1:5500/formulaire.html" ><span>sign up</span></a></li>
+                                <li><form><input class="formnav" type="search" placeholder="Recherche"></form></li>
+                                <li><a class="ulnav" href="http://127.0.0.1:5500/panier.html"><span><img class="cadi" src="images\C.png" /></span></a></li>
+                            </ul><img class="backgroundnav" src="images\your-video-game-childhood.gif"/></nav>
+    </div>
+    
+
+<div class="flexpanier">
+         <ul class="ulpanier">
+            <li><img class="button1panier" src="images\Panier.png"></li>
+            <li><h2 class="p1panier">Résumé du panier</h2></li>
+            <li><img class="b1panier" src="images\Panier\b1.png" /></li>
+            <li><img class="b1panier" src="images\Panier\b2.png" /></li>
+            <li><img class="b1panier" src="images\Panier\b3.png" /></li>
+         </ul>
+</div>
+
+<div style="width: 1100px;">
+    <ul class="plienpanier">
+    <li><a style="text-decoration:none" href="http://127.0.0.1:5500/produit.html"><p class="p2panier">Retour au achat</p></a></li>
+    <li><a style="text-decoration:none" href="http://127.0.0.1:5500/formulaire.html"><p class="p2panier">Procéder au paiement</p></a></li> 
+    </ul>
+        <div><img class="recap" src="images\Panier\recap.png"></div>
+        <div><a href="http://127.0.0.1:5500/formulaire.html"><img class="recap" src="images\Panier\button paiement.png"></a></div>
+</div>
+
+ <footer class="botnoir">
+    
+
+    <p class="blabot">Contact : 06.06.06.06.60</p>
+
+    <div><img src="images\rtype\rtype (2).gif" /><a href="#"><img class="logobot" src="images\F.png"></a>
+    <a href="#"><img src="images\T.png"></a>
+    <a href="#"><img src="images\I.png"></a>
+    <a href="#"><img src="images\in.png"></a></div>
+    </div>
+        </div>
+    
+
+</footer>
+<!-- DEBUT DU SCRIPT JS -->
+<style><!--BODY{cursor:url(images/3.gif),default; }--></style>
+
+<script type="text/javascript">
+
+    var x = 0;
+    var y = 0;
+    
+    if (document.getElementById)
+       {
+       if(navigator.appName.substring(0,3) == "Net")
+          document.captureEvents(Event.MOUSEMOVE);
+       document.onmousemove = Pos_Souris;
+       window.onload = Bouge_Image;
+       }
+    
+    function Pos_Souris(e)
+       {
+       x = (navigator.appName.substring(0,3) == "Net") ? e.pageX : event.x+document.body.scrollLeft;
+       y = (navigator.appName.substring(0,3) == "Net") ? e.pageY : event.y+document.body.scrollTop;
+       }
+    
+    posX = 0;
+    posY = 0;
+    anim = true;
+    oldpos = "images/1.gif";
+    
+    function Bouge_Image()
+       {
+       if (document.getElementById && anim)
+          {
+          posX = posX+(((x-posX)+20)/15);
+          posY = posY+(((y-posY)+20)/15);
+          if(posX<x)
+             newpos='images/2.gif';
+          else
+             newpos='images/1.gif';
+       if(newpos!=oldpos)
+        {
+      document.tete.src=newpos;
+      oldpos=newpos;
+      }
+          document.getElementById("teteronde").style.top = posY+"px";
+          document.getElementById("teteronde").style.left = posX+"px";
+          tempo = setTimeout("Bouge_Image()", 15)
+          }
+       }
+    
+    if(document.getElementById)
+       {
+       document.write('<div id="teteronde" style="position: absolute">');
+       document.write('<a href="#" onClick="anim=false;document.getElementById(\'teteronde\').style.visibility = \'hidden\';return(false)">');
+       document.write('<img src="images/2.gif" style="border:0px" name="tete" alt="Cliquez ici pour faire dispara�tre" />');
+       document.write('</a>');
+       document.write('</div>');
+       }
+    </script>
+    <!-- FIN DU SCRIPT JS -->
+    
+</body>
+</html>

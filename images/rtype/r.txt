@@ -1,0 +1,35 @@
+<div style="cursor:url('coke.ani');">Curseur personalisé animé</div>
+
+cursor: url('votre_curseur_perso.cur'), pointer; 
+
+<style><!--BODY{cursor:url(http://i89.servimg.com/u/f89/10/09/45/37/curseu12.gif),default; }--></style>
+
+<head>
+<style type="text/css"> <! -
+a: hover {cursor: url ("images/1.ani"), pointeur}
+-> </ Style>
+</ Head> 
+
+<style type="text/css">
+ body {
+ curseur: url (mycursor.cur)
+ }
+ </ Style> 
+
+<BODY Style="cursor: url(' http://jptg69.free.fr/images/RTypenormalselection.ani')">
+
+<style type="text/css">body {cursor:url(images/1.ani),auto;}</style>
+
+<style>
+<!--
+BODY{
+cursor:url("http://pmsc.free.fr/C/08228152254.ani");
+}
+-->
+</style> 
+
+
+<style><!--BODY{cursor:url(images/1.gif),default; }--></style> 
+
+
+les ico peucent etre transphormé en cur 

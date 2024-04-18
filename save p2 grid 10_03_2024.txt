@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cyberaX</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container1">
+        <div class="item1"><p>La livraison offerte des 50€ d'achat !</p></div>
+        <div class="item2"><img src="images\logo.png"></div>
+        <nav class="item3"><ul class="button">
+                                <li><a href="http://127.0.0.1:5500/index.html" ><strong><span>HOME</span></strong></a></li>
+                                <li><a href="http://127.0.0.1:5500/index.html" ><span>about</span></a></li>
+                                <li><a href="http://127.0.0.1:5500/index.html" ><span>sign up</span></a></li>
+                            </ul></nav>
+    </div>
+    <div class="container2">
+        <div class="item4"><ul class="menu button">
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html"><span>PC assemblé</span></a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html"><span>Ecrans</span></a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html"><span>Peripheriques</span></a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html"><span>Composants</span></a></li>
+            <li class="limenu"><a href="http://127.0.0.1:5500/index.html"><span>Consommables</span></a></li>
+        </ul></div>
+        </div>
+
+        <div class="item5">
+            <img class="iconjaunepromo" src="images\icon jaune promo.png"><h1 class="ppromo">Promo en cours</h1>
+            <div class="slider">
+            <div class="slides">
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran1.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran4.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran5.png" alt="" /></div>
+                <div class="slide"><img src="images\ecrans\redimentionné\iloveimg-resized\ecran2.png" alt="" /></div>
+            </div>
+            </div>
+        </div>
+    
+        <div class="item6">
+            <img class="iconjaune" src="images\icon jaune.png">
+            <h1 class="h12">Meilleur vente</h1>
+            <button class="positionbutton"><a href="#"><span>Tout voir</span></a></button>  
+            <div class="divmvente">
+                <a href="#"><img class="mvente" src="images\jeux\mv (1).jpg" /><p>N64. Doom64</p></a>
+                <a href="#"><img class="mvente" src="images\jeux\mv (2).jpg" /><p>PS1. Castle Vania SOTN (pal edition)</p></a>
+                <a href="#"><img class="mvente" src="images\jeux\mv (3).jpg" /><p>GB. Original R-Type (pal edition)</p></a>
+                <a href="#"><img class="mvente" src="images\jeux\mv (1).png" /><p>NES. Original Zelda  "Gold edition !"</p></a>
+                <a href="#"><img class="mvente" src="images\jeux\mv (2).png" /><p>N64. Zelda OOT "Gold edition !"</p></a>
+                <a href="#"><img class="mvente" src="images\jeux\mv (3).png" /><p>N64. Original Turok (no box)</p></a>
+            </div>    
+        </div>
+        <div class="item7"></div>
+        <div class="item8"></div>
+      
+
+CSS----------------------------------------
+
+body {
+  background-color: #696969;
+  border: 2px solid #e1ff00;
+  border-radius: 15px;
+}
+.container1 {  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 50px 1fr;
+  gap: 0px 0px; /* marge entre les grilles */
+ /* grid-auto-flow: row; Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. */
+  grid-template-areas: /* repartition des elements en colone et en ligne (exe:une colone de 2 lignes) */
+    "item1 item1" /* Paragraphe top fond noir */
+    "item2 item3" /* logo et nav bar */
+    
+}
+
+.item1 { grid-area: item1; 
+background-color: black;
+color: white;
+text-align: center;
+letter-spacing:0.75em ;
+border-radius: 15px;
+}
+
+.item2 { grid-area: item2; /* logo */
+  border: 2px solid #e1ff00;
+  border-radius: 15px;
+  
+}
+  /* NAV BAR */
+.item3 { grid-area: item3; 
+padding: 5%;
+}
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    border:2px solid #e1ff00;
+    background-color: #3f3f3f;
+    border-radius: 15px;
+    height: 87px;
+    padding: 2% 0 0 3%;
+    width: 600px;
+  }
+  nav li {
+    padding: 12px 0 5px 0;
+    width: 25%;
+  }
+  nav a {
+   font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff00;  /* lier */
+    /*border:2px solid #3f3f3f;*/
+  }
+  /*ul li a:hover {
+    background-color: #696969; /* lier */
+    /*padding: 2% 9% 2% 9%;
+    border: 2px solid #e1ff00;
+    
+    border-radius: 30px;
+  }/*
+  /* NAV BAR - fin -*/
+
+
+
+
+.container2 {  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px; /* marge entre les grilles */
+ /* grid-auto-flow: row; Les éléments sont organisés en remplissant chacune des lignes au fur et à mesure, quitte à en ajouter si besoin. */
+ grid-template-areas: /* repartition des elements en colone et en ligne (exe:une colone de 2 lignes) */
+ "item4 item5" /* menu et baniere sales (sur 2 lignes) */
+ "item4 item5"
+ "item6 item6" /* best produits */
+ "item7 item7" /* logo de fin */
+ "item8 item8"; /* lien contact (fond noir */
+}
+.item4 { grid-area: item4;
+  
+}
+  .menu {
+    font-size: 1em;
+    background-color: #3f3f3f;  /* lier */
+    list-style: none;
+    
+    border:2px solid #e1ff00;
+
+   /* transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;*/
+
+    border-radius: 15px;
+    width: 270px; /* largeur du menu */
+    height: auto; /* hauteur du menu */
+    padding: 9% 5%; /* padding des rebord du menu */
+     
+  }
+  .limenu {
+    padding: 5%; /*pading entre les lien du menu */
+  }
+/* li a { /* retrait du soulignement des lien du menu et la couleur de police
+  text-decoration: none;
+  color: #000000;
+} */
+
+.item5 { grid-area: item5; } 
+.iconjaunepromo {
+  position: relative;
+  top: 48%;
+  left:30%;
+  width: 120px;
+  height: 50px;
+  
+}
+.ppromo {
+  position: absolute;
+  width: 300;
+  top: 53%;
+  left:30%;
+}
+/* premiere baniere */
+.slider {
+  width: 1000px; /* tail du splider (taille corespondant à 2 images) */
+  overflow: hidden; /* le overflow est hidden (le cache) */
+  height: 316px;
+  position: absolute;
+  top:62% ;
+  left: 30% ;
+  border:2px solid #e1ff00;
+  border-radius: 15px;
+  }
+
+  .slides {
+    width: calc(500px * 4); /* "calc = calcule" de la tail du nombre d'images */
+    animation: glisse 15s infinite; /* animer le slide, animation glisse, secondes vouluent, et lui donner une boucle infini */
+  }
+  .slide {
+    float: left; /* positionne les images vers la gauche (caché par l'OVERFLOW)(slide) */
+  }
+  @keyframes glisse { /*cree l'animation, les "%" donnent le pourcentage, les "-500px" donnent la position au pourcentage données  */
+0% {
+  transform: translateX(0);
+}
+10% {
+  transform: translateX(0);
+}
+33% {
+  transform: translateX(-500px);
+}
+43% {
+  transform: translateX(-500px);
+}
+66% {
+  transform: translateX(-1000px);
+}
+76% {
+  transform: translateX(-1000px);
+}
+100% {
+  transform: translateX(0);
+}
+}
+
+.item6 { grid-area: item6;}
+.iconjaune {
+  position: relative;
+    left:13%;
+    bottom:130%;
+
+  width: 120px;
+  height: 50px;
+  padding: 3% 0 0 18%;
+}
+.h12 {
+  position: relative;
+  left:13%;
+  bottom:130%;
+}
+
+/* button */
+.button {  
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #e1ff00;
+    text-transform: uppercase;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 600; /* police "gras" */
+    font-size: 1em;
+    border-radius: 0px;
+  }
+  
+  a::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);/*cache gris du bouton */
+    height: calc(100% - 12px);
+    background-color: #3f3f3f;
+    transition: 0.1s ease-in-out;
+    transform: scaleY(1);
+  }
+  
+  a:hover::before {
+    transform: scaleY(0);
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px); /*cache gris du bouton */
+    width: calc(100% - 12px);
+    background-color: #3f3f3f;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  }
+  
+  a:hover::after {
+    transform: scaleX(0);
+  }
+  
+  a span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    background-color: none;
+    text-decoration: none;
+    background-color: #696969; /* ? */
+    border: none;
+  }
+}
+
+  .positionbutton {
+    position: relative;
+    left:70%;
+    bottom:140%;
+    a {
+      position: relative;
+      display: inline-block;
+      padding: 15px 30px;
+      border: 2px solid #e1ff00;
+      text-transform: uppercase;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600; /* police "gras" */
+      font-size: 1.5em;
+      border-radius: 15px;
+    }
+    
+    a::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: -2px;
+      width: calc(100% + 4px);/*cache gris du bouton */
+      height: calc(100% - 12px);
+      background-color: #696969;
+      transition: 0.1s ease-in-out;
+      transform: scaleY(1);
+    }
+    
+    a:hover::before {
+      transform: scaleY(0);
+    }
+    
+    a::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: -2px;
+      height: calc(100% + 4px); /*cache gris du bouton */
+      width: calc(100% - 12px);
+      background-color: #696969;
+      transition: 0.3s ease-in-out;
+      transform: scaleX(1);
+      transition-delay: 0.5s;
+    }
+    
+    a:hover::after {
+      transform: scaleX(0);
+    }
+    
+    a span {
+      position: relative;
+      z-index: 3;
+    }
+    
+    button {
+      background-color: none;
+      text-decoration: none;
+      background-color: #696969; /* ? */
+      border: none;
+    }
+  }
+
+  .divmvente {
+    height: 500px;
+    width: 900px;
+    border: 2px solid #e1ff00;
+    border-radius: 15px;
+
+    display: flex; /* donne au conteneur l'attribut "flexBox" */
+    flex-wrap: wrap; /*donne au conteneur "flexbox" la fonction "warp" (place les iteme en dessous des autre si le "display" et trop (ou devient) trop petit pour les contenir */
+    justify-content: space-around; /* aligne les items des "ligne" à egale distance les un des autre (et des marge du conteneur) */
+    align-items: center; /* aligne les items au centre du conteneur */
+
+    position: relative; /* place le conteneur via des cohordonnées dans le flux de la page */
+    left: 30%;
+  }
+  .mvente {
+    width: 250px;
+    height: 150px;
+    font-size: 0.5em;
+  }
+
+
+
+
+
+.item7 { grid-area: item7; }
+
+.item8 { grid-area: item8; }
+
+/* button {
+  position: absolute;
+  bottom: -7%;
+  left: 70%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 150px;
+  height: 50px;
+  background-image:linear-gradient(to top, #3f3f3f 0%, #3f3f3f 80%, #3f3f3f 100%);
+  border-radius: 30px;
+  border: 2px solid #e1ff00;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+ 
+}
+
+button:hover, a:hover {
+  box-shadow: 0 4px 3px 1px #e1ff00, 0 6px 8px #e1ff00, 0 -4px 4px #e1ff00, 0 -6px 4px #e1ff00, inset 0 0 3px 3px #e1ff00;
+}
+
+button:active, a:hover{
+  box-shadow: 0 4px 3px 1px #e1ff00, 0 6px 8px #e1ff00, 0 -4px 4px #e1ff00, 0 -6px 4px #e1ff00, inset 0 0 5px 3px #e1ff00, inset 0 0 30px #e1ff00;
+}
+
+button:focus, a:hover {
+  box-shadow: 0 4px 3px 1px #e1ff00, 0 6px 8px #e1ff00, 0 -4px 4px #e1ff00, 0 -6px 4px #e1ff00, inset 0 0 5px 3px #e1ff00, inset 0 0 30px #e1ff00;
+} */
